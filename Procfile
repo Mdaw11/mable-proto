@@ -1,1 +1,1 @@
-web: gunicorn mable.wsgi --log-file-
+web: gunicorn mable.wsgi --log-file -
