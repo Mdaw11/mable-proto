@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block htmlhead %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/dashboard.css' %}" />
+{% endblock htmlhead %}
+{% block content %}
+    <!-- MAIN -->
+<main id="content">
+    <div class="row">
+        <div class="column">
+            <div class="priority">
+                <div class="priority-box">
+                    <canvas id="priority-pie-chart"></canvas>
+                    <p id="priority-title">
+                        Tickets by Priority
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="type">
+                <div class="type-box">
+                    <canvas id="donut-chart"></canvas>
+                    <p id="type-title">
+                        Tickets by Type
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="status">
+                <div class="status-box">
+                    <canvas id="status-pie-chart"></canvas>
+                    <p id="status-title">
+                        Tickets by Status
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="user-ticket">
+                <div class="user-ticket-box">
+                    <canvas id="user-donut-chart"></canvas>
+                    <p id="user-ticket-title">
+                        User's Tickets
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <!-- MAIN -->
+{% endblock content %}

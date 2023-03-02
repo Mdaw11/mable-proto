@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block htmlhead %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/project.css' %}" />
+{% endblock htmlhead %}
+{% block content %}
+
+<main id="content">
+  <h1 class="title"><a href="{% url 'create-project' %}" class="button-3" role="button">Create New Project</a></h1>
+  <ul class="breadcrumbs">
+    <li><a href="#">Home</a></li>
+    <li class="divider">/</li>
+    <li><a href="#" class="active">Dashboard</a></li>
+  </ul>
+  <div class="info-data">
+  </div>
+  <div class="project-home-data">
+    <div class="project-content-data">
+      <div class="project-head">
+        <h3>Your Projects</h3>
+      </div>
+      <div class="project-search">
+        <p>Show # Entries</p>
+        <form action="">
+          <input type="text" name="search" class="search-input" placeholder="Search">
+        </form>
+        
+      </div>
+      <div class="project-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Project Name</th>
+              <th>Description</th>
+              <th></th>
+              <th>Created</th>
+            </tr>
+          </thead>
+          {% for project in page_obj %}
+          <tbody>
+            <tr>
+              <td><a href="{% url 'project' project.id %}">{{project.name}}</a></td>
+              <td>{{project.description}}</td>
+              <td></td>
+              <td>{{project.created|date:"F d, Y"}}</td>
+              
+            </tr>
+            
+          </tbody>
+          {% endfor %}
+        </table>
+        <p>Showing {{ projects.start_index }} to {{ projects.end_index }} of {{ projects.paginator.count }} entries</p>
+        <div class="pagination">
+            {% if page_obj.has_previous %}
+              <a href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+            {% else %}
+              
+            {% endif %}
+
+            {% for page in page_obj.paginator.page_range %}
+              {% if page_obj.number == page %}
+                <a href="#" class="active">{{ page }}</a>
+              {% else %}
+                <a href="?page={{ page }}">{{ page }}</a>
+              {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+              <a href="?page={{ page_obj.next_page_number }}">&raquo;</a>
+            {% else %}
+              
+            {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

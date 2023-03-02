@@ -1,0 +1,54 @@
+<header id="content">
+  <!-- NAVBAR -->
+  <nav>
+    <i class='bx bx-menu toggle-sidebar' ></i>
+    <form action="#">
+      <!-- <div class="form-group">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search icon' ></i>
+      </div> -->
+    </form>
+    <div class="nav-link">
+      <button onclick="myFunction()" class="bx bxs-bell icon dropbtn"></button>
+      <div id="myDropdown" class="dropdown-content">
+        {% for notification in notifications %}
+          {% if notification.notification_type == "created" or notification.notification_type == "updated" %}
+            <a href="{% url 'ticket' notification.ticket.id %}" class="notification-link" data-notification-id="{{ notification.id }}" onclick="markAsRead(this)">{{ notification.message }}</a>
+          {% endif %}
+        {% endfor %}
+        {% if notifications.count == 0 %}
+          <a href="#" class="notification-link">No new notifications</a>
+        {% endif %}
+      </div>
+      <span class="badge">{{ count }}</span>
+    </div>
+    <a href="#" class="nav-link">
+      <i class='bx bxs-message-square-dots icon' ></i>
+      <span class="badge">8</span>
+    </a>
+    <span class="divider"></span>
+    <!-- Logged In -->
+    {% if request.user.is_authenticated %}
+    <div class="profile">
+      <img src="{{ request.user.profile.profile_pic.url }}" alt="">
+      <ul class="profile-link">
+        <li><a href="{% url 'profile' %}"><i class='bx bxs-user-circle icon' ></i> Profile</a></li>
+        <!-- <li><a href="#"><i class='bx bxs-cog' ></i> Settings</a></li> -->
+        <li><a href="{% url 'logout' %}"><i class='bx bxs-log-out-circle' ></i> Logout</a></li>
+      </ul>
+    </div>
+    {% else %}
+
+    <!-- Not Logged In -->
+    <div class="profile">
+      <img src="/media/default.jpg" alt="">
+      <ul class="profile-link">
+        <li><a href="{% url 'login' %}"><i class='bx bxs-log-out-circle' ></i> Login</a></li>
+      </ul>
+    </div>
+    {% endif %}
+  </nav>
+  <!-- NAVBAR -->
+
+  
+</header>
