@@ -310,21 +310,6 @@ nav .nav-link .badge {
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
   }
-
-  /* .dropdown-content {
-	display: none;
-	position: absolute;
-	top: calc(100% + 10px);
-	background: var(--light);
-	right: 0;
-	padding: 10px 0;
-	box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
-	border-radius: 10px;
-	width: 160px;
-	pointer-events: none;
-	transition: all .3s ease;
-	z-index: 1;
-  } */
   
   .dropdown-content a {
 	color: black;
@@ -341,38 +326,6 @@ nav .nav-link .badge {
   .show {display: block;}
 
 
-/* .dropdown {
-	position: relative;
-	display: inline-block;
-  }
-  
-.dropdown-menu {
-	display: none;
-	position: absolute;
-	top: calc(100% + 10px);
-	background: var(--light);
-	right: 0;
-	padding: 10px 0;
-	box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
-	border-radius: 10px;
-	width: 160px;
-	pointer-events: none;
-	transition: all .3s ease;
-	z-index: 1;
-}
-
-  
-
-.dropdown-menu a {
-	display: block;
-	padding: 10px;
-	border-bottom: 1px solid rgb(241, 241, 241);
-	border-top: 1px solid rgb(222, 222, 222);
-}
-  
-.dropdown:hover .dropdown-menu {
-	display: block;
-} */
 
 
 /* NOTIFICATION DROPDOWN END */
@@ -600,19 +553,130 @@ main .content-data .chart::-webkit-scrollbar {
 /* MAIN */
 /* CONTENT */
 
+#sidebar-toggle {
+	display: none;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 999;
+	background-color: #fff;
+	padding: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 
 
+/* SIDEBAR RESPONSIVENESS */
 
-
-
-@media screen and (max-width: 768px) {
-	#content {
-		position: relative;
-		width: calc(100% - 60px);
-		transition: all .3s ease;
+@media only screen and (max-width: 1023px) {
+	/* adjust sidebar max-width */
+	#sidebar {
+		max-width: 100%;
 	}
-	nav .nav-link,
-	nav .divider {
+	
+	/* adjust brand font-size and padding */
+	#sidebar .brand {
+		font-size: 20px;
+		padding: 0 10px;
+	}
+	
+	/* hide icon-right */
+	#sidebar .icon-right {
 		display: none;
 	}
+	
+	/* adjust side-menu padding */
+	#sidebar .side-menu {
+		margin: 24px 0;
+		padding: 0 10px;
+	}
+	
+	/* adjust side-menu font-size and padding */
+	#sidebar .side-menu a {
+		font-size: 12px;
+		padding: 10px 16px 10px 0;
+		margin: 2px 0;
+	}
+	
+	/* adjust divider font-size and margin */
+	#sidebar .divider {
+		font-size: 10px;
+		margin-top: 12px;
+	}
+	
+	/* adjust dropdown padding-left */
+	#sidebar .side-dropdown {
+		padding-left: 44px;
+	}
+	
+	/* hide ads */
+	#sidebar .ads {
+		display: none;
+	}
+	
+	/* adjust btn-upgrade font-size and padding */
+	#sidebar .btn-upgrade {
+		font-size: 12px;
+		padding: 10px 0;
+		margin-bottom: 8px;
+		}
+	}
+
+	#sidebar-toggle {
+		display: block;
+	}
+	
+@media only screen and (max-width: 767px) {
+	/* adjust brand font-size */
+	#sidebar .brand {
+		font-size: 16px;
+	}
+	
+	/* adjust side-menu font-size and padding */
+	#sidebar .side-menu a {
+		font-size: 10px;
+		padding: 8px 16px 8px 0;
+		margin: 2px 0;
+	}
+	
+	/* adjust dropdown padding-left */
+	#sidebar .side-dropdown {
+		padding-left: 34px;
+	}
+	
+	/* adjust btn-upgrade font-size and padding */
+	#sidebar .btn-upgrade {
+			font-size: 10px;
+			padding: 8px 0;
+			margin-bottom: 8px;
+	}
+	
+	nav form {
+		max-width: 200px; /* reduce max-width */
+	}
+	nav .nav-link .badge {
+		font-size: 8px; /* reduce font-size */
+	}
+	.dropdown-content {
+		top: 44px; /* adjust position */
+		right: -20px; /* adjust position */
+		min-width: 120px; /* reduce width */
+	}
+	nav .profile .profile-link {
+		top: 44px; /* adjust position */
+		right: -20px; /* adjust position */
+		width: 120px; /* reduce width */
+	}
+	nav .profile .profile-link a {
+		padding: 6px 10px; /* reduce padding */
+		font-size: 10px; /* reduce font-size */
+		grid-gap: 4px; /* reduce gap */
+	}
+
+	#sidebar-toggle {
+		display: block;
+	}
 }
+	
+	
+
+/* SIDEBAR RESPONSIVENESS END */
