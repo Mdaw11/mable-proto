@@ -13,3 +13,53 @@ Notifications: Mable provides real-time notifications for updates on tickets you
 Customizable templates: Depending on their user role, each user will have access to different templates to create, read, update, and delete projects and tickets. This allows users to focus on the tasks and information that are most relevant to them.
 
 Overall, Mable is a user-friendly and efficient bug tracker web application that can help you streamline your development projects, prioritize tasks, and manage issues with ease.
+
+
+To use Mable, you'll need to have the following requirements installed on your local machine:
+
+Python 3.x
+Django 3.x
+Git
+Once you have these installed, follow these steps to set up Mable:
+
+Clone the Mable repository from Github using Git:
+bash
+Copy code
+git clone https://github.com/your-username/mable.git
+Navigate to the project directory:
+bash
+Copy code
+cd mable
+Create a virtual environment for Mable:
+bash
+Copy code
+python3 -m venv env
+Activate the virtual environment:
+bash
+Copy code
+source env/bin/activate
+Install the required dependencies:
+Copy code
+pip install -r requirements.txt
+Create the database tables:
+Copy code
+python manage.py migrate
+Create a superuser account:
+Copy code
+python manage.py createsuperuser
+Start the development server:
+Copy code
+python manage.py runserver
+Once you've completed these steps, you can navigate to http://localhost:8000/ in your web browser to access the Mable web application.
+
+If you want to deploy Mable to a public domain, you can follow these steps:
+
+Sign up for a hosting service that supports Django, such as Heroku or PythonAnywhere.
+
+Create a new project and connect it to your Mable repository on Github.
+
+Set up the necessary environment variables, such as the database credentials and secret key.
+
+Deploy your project using the hosting service's deployment tools.
+
+Once your project is deployed, you can access it from the public domain provided by the hosting service.
