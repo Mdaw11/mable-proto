@@ -22,48 +22,48 @@ Django 3.x
 Git
 Once you have these installed, follow these steps to set up Mable:
 
-Clone the Mable repository from Github using Git:
+1. Clone the Mable repository from Github using Git:
 
-git clone https://github.com/your-username/mable.git
+```git clone https://github.com/your-username/mable.git```
 
-Navigate to the project directory:
+2. Navigate to the project directory:
 
 ```cd mable```
 
-Create a virtual environment for Mable:
+3. Create a virtual environment for Mable:
 
-python3 -m venv env
+```python3 -m venv env```
 
-Activate the virtual environment:
+4. Activate the virtual environment:
 
-source env/bin/activate
+```source env/bin/activate```
 
-Install the required dependencies:
+5. Install the required dependencies:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
-Create the database tables:
+6. Create the database tables:
 
-python manage.py migrate
+```python manage.py migrate```
 
-Create a superuser account:
+7. Create a superuser account:
 
-python manage.py createsuperuser
+```python manage.py createsuperuser```
 
-Start the development server:
+8. Start the development server:
 
-python manage.py runserver
+```python manage.py runserver```
 
 Once you've completed these steps, you can navigate to http://localhost:8000/ in your web browser to access the Mable web application.
 
 If you want to deploy Mable to a public domain, you can follow these steps:
 
-Sign up for a hosting service that supports Django, such as Heroku or PythonAnywhere.
+1. Sign up for a hosting service that supports Django, such as Heroku or PythonAnywhere.
 
-Create a new project and connect it to your Mable repository on Github.
+2. Create a new project and connect it to your Mable repository on Github.
 
-Set up the necessary environment variables, such as the database credentials and secret key.
+3. Set up the necessary environment variables, such as the database credentials and secret key.
 
-Deploy your project using the hosting service's deployment tools.
+4. Deploy your project using the hosting service's deployment tools.
 
-Once your project is deployed, you can access it from the public domain provided by the hosting service.
+5. Once your project is deployed, you can access it from the public domain provided by the hosting service.
