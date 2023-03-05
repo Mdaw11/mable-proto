@@ -28,7 +28,7 @@ git clone https://github.com/your-username/mable.git
 
 Navigate to the project directory:
 
-cd mable
+```cd mable```
 
 Create a virtual environment for Mable:
 
