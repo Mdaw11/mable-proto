@@ -23,33 +23,37 @@ Git
 Once you have these installed, follow these steps to set up Mable:
 
 Clone the Mable repository from Github using Git:
-bash
-Copy code
+
 git clone https://github.com/your-username/mable.git
+
 Navigate to the project directory:
-bash
-Copy code
+
 cd mable
+
 Create a virtual environment for Mable:
-bash
-Copy code
+
 python3 -m venv env
+
 Activate the virtual environment:
-bash
-Copy code
+
 source env/bin/activate
+
 Install the required dependencies:
-Copy code
+
 pip install -r requirements.txt
+
 Create the database tables:
-Copy code
+
 python manage.py migrate
+
 Create a superuser account:
-Copy code
+
 python manage.py createsuperuser
+
 Start the development server:
-Copy code
+
 python manage.py runserver
+
 Once you've completed these steps, you can navigate to http://localhost:8000/ in your web browser to access the Mable web application.
 
 If you want to deploy Mable to a public domain, you can follow these steps:
