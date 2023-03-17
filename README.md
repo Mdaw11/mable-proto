@@ -1,10 +1,15 @@
 # mable-proto
 
 Welcome to Mable, a web-based bug tracker designed to help you manage and prioritize issues and tasks in your software development projects. Whether you're working solo or with a team, Mable provides a streamlined and efficient workflow for reporting, tracking, and resolving issues.
+![mable-profile](https://user-images.githubusercontent.com/75034316/225788717-02be66f7-0d8c-4409-aaa0-58df6a82745d.png)
+![mable-dashboard](https://user-images.githubusercontent.com/75034316/225788744-32ece86b-0794-472b-b596-e19d429c9f8a.png)
+![mable-project-detail](https://user-images.githubusercontent.com/75034316/225788752-644e1816-6ec7-4d17-a94d-a085081eb52c.png)
+![mable-ticket-home](https://user-images.githubusercontent.com/75034316/225788757-4a5cf9d6-f07e-473b-b42e-ff7141a7fba3.png)
 
 Mable includes several key features that make it a powerful tool for managing your development projects. These features include:
 
 Multiple user roles: Mable allows you to create and manage different user roles with varying levels of permissions, including admin, developer, and project manager. This ensures that each user can only access the features and data they need to do their job.
+
 
 Projects and tickets: With Mable, you can create and manage projects, and track progress using tickets. Each ticket can be assigned to a specific user, and is connected to a project. You can also add comments, attachments, and labels to tickets for better organization.
 
